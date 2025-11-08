@@ -722,10 +722,9 @@ namespace Endscript.Profiles
 			try
 			{
 
-				sdb.Save();
-				return null;
+                return sdb.Save();
 
-			}
+            }
 			catch (Exception ex)
 			{
 

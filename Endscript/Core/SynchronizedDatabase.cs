@@ -34,7 +34,7 @@ namespace Endscript.Core
 		}
 
 		public void Load() => this.Database.Load(new Options() { File = this.FullPath });
-		public void Save() => this.Database.Save(new Options() { File = this.FullPath, Watermark = Watermark });
+		public string Save() => this.Database.Save(new Options() { File = this.FullPath, Watermark = Watermark });
 
 		public override bool Equals(object obj) => obj is SynchronizedDatabase sdb && this == sdb;
 		public override int GetHashCode() => this.FullPath.GetHashCode();
